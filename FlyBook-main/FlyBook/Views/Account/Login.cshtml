@@ -1,0 +1,108 @@
+@model FlyBook.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-page">
+
+    <!-- Animated planes -->
+    <div class="login-plane login-plane-1">✈</div>
+    <div class="login-plane login-plane-2">✈</div>
+    <div class="login-plane login-plane-3">✈</div>
+
+    <div class="login-card">
+
+        <div class="login-brand">
+
+            <div class="login-logo">
+                ✈
+            </div>
+
+            <h1>
+                Fly<span>Book</span>
+            </h1>
+
+            <p>
+                Welcome back. Login to continue your journey.
+            </p>
+
+        </div>
+
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-danger mb-3">
+        </div>
+
+
+        <form asp-controller="Account"
+              asp-action="Login"
+              method="post">
+
+            <div class="mb-3">
+
+                <label asp-for="Email"
+                       class="form-label">
+                    Email
+                </label>
+
+                <input asp-for="Email"
+                       class="form-control login-control"
+                       placeholder="example@email.com" />
+
+                <span asp-validation-for="Email"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label asp-for="Password"
+                       class="form-label">
+                    Password
+                </label>
+
+                <input asp-for="Password"
+                       class="form-control login-control"
+                       placeholder="Enter your password" />
+
+                <span asp-validation-for="Password"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <button type="submit"
+                    class="login-btn">
+
+                Login
+                <span>✈</span>
+
+            </button>
+
+        </form>
+
+
+        <div class="login-register">
+
+            Don't have an account?
+
+            <a asp-controller="Account"
+               asp-action="Register">
+
+                Create New Account
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

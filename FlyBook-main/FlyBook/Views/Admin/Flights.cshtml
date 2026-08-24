@@ -1,0 +1,89 @@
+@model List<FlyBook.Models.Flight>
+
+@{
+    ViewData["Title"] = "Flights";
+}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Flights</h2>
+
+        <a asp-action="CreateFlight"
+           class="btn btn-primary">
+
+            Add Flight
+
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Flight Number</th>
+                <th>Airline</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Price</th>
+                <th>Seats</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var flight in Model)
+            {
+                <tr>
+                    <td>@flight.FlightId</td>
+                    <td>@flight.FlightNumber</td>
+                    <td>@(flight.Airline?.Name ?? "N/A")</td>
+                    <td>@(flight.FromAirport?.Code ?? "N/A")</td>
+                    <td>@(flight.ToAirport?.Code ?? "N/A")</td>
+                    <td>@flight.DepartureDateTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@flight.ArrivalDateTime.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>JOD @flight.Price</td>
+                    <td>@flight.AvailableSeats</td>
+                    <td>
+                        <a asp-action="EditFlight"
+                           asp-route-id="@flight.FlightId"
+                           class="btn btn-warning btn-sm">
+
+                            Edit
+
+                        </a>
+
+                        <a asp-action="DeleteFlight"
+                           asp-route-id="@flight.FlightId"
+                           class="btn btn-danger btn-sm">
+
+                            Delete
+
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

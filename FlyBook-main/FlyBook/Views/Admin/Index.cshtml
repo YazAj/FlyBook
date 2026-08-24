@@ -1,0 +1,235 @@
+@model List<FlyBook.Models.Booking>
+
+@functions {
+    private string BookingBadgeClass(string? status)
+    {
+        return status switch
+        {
+            "Confirmed" => "admin-dashboard-badge admin-dashboard-badge-success",
+            "Cancelled" => "admin-dashboard-badge admin-dashboard-badge-danger",
+            "Pending" => "admin-dashboard-badge admin-dashboard-badge-warning",
+            _ => "admin-dashboard-badge admin-dashboard-badge-muted"
+        };
+    }
+
+    private string PaymentBadgeClass(string? status)
+    {
+        return status switch
+        {
+            "Paid" => "admin-dashboard-badge admin-dashboard-badge-info",
+            "Pending" => "admin-dashboard-badge admin-dashboard-badge-warning",
+            _ => "admin-dashboard-badge admin-dashboard-badge-muted"
+        };
+    }
+}
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container admin-dashboard-page">
+
+    <div class="admin-dashboard-header">
+
+        <div>
+
+            <span class="admin-dashboard-eyebrow">
+                ✈ FlyBook Admin
+            </span>
+
+            <h2>
+                Admin Dashboard
+            </h2>
+
+            <p>
+                Overview of FlyBook system activity
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section class="admin-dashboard-stats">
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">👤</div>
+            <div>
+                <span>Total Users</span>
+                <strong>@ViewBag.TotalUsers</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">✈</div>
+            <div>
+                <span>Total Flights</span>
+                <strong>@ViewBag.TotalFlights</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">▣</div>
+            <div>
+                <span>Total Bookings</span>
+                <strong>@ViewBag.TotalBookings</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card admin-dashboard-stat-card-featured">
+            <div class="admin-dashboard-stat-icon">JOD</div>
+            <div>
+                <span>Total Revenue</span>
+                <strong>JOD @ViewBag.TotalRevenue</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">○</div>
+            <div>
+                <span>Pending Bookings</span>
+                <strong>@ViewBag.PendingBookings</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">✓</div>
+            <div>
+                <span>Confirmed Bookings</span>
+                <strong>@ViewBag.ConfirmedBookings</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">×</div>
+            <div>
+                <span>Cancelled Bookings</span>
+                <strong>@ViewBag.CancelledBookings</strong>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-stat-card">
+            <div class="admin-dashboard-stat-icon">✓</div>
+            <div>
+                <span>Paid Payments</span>
+                <strong>@ViewBag.PaidPayments</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="admin-dashboard-panel">
+
+        <div class="admin-dashboard-section-header">
+            <div>
+                <h4>Quick Actions</h4>
+                <p>Manage the core FlyBook records</p>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-actions">
+
+            <a asp-action="Flights" class="admin-dashboard-action">
+                <span>✈</span>
+                <strong>Flights</strong>
+            </a>
+
+            <a asp-action="Airlines" class="admin-dashboard-action">
+                <span>▤</span>
+                <strong>Airlines</strong>
+            </a>
+
+            <a asp-action="Airports" class="admin-dashboard-action">
+                <span>⌂</span>
+                <strong>Airports</strong>
+            </a>
+
+            <a asp-action="Bookings" class="admin-dashboard-action">
+                <span>▣</span>
+                <strong>Bookings</strong>
+            </a>
+
+            <a asp-action="Payments" class="admin-dashboard-action">
+                <span>JOD</span>
+                <strong>Payments</strong>
+            </a>
+
+            <a asp-action="Users" class="admin-dashboard-action">
+                <span>👤</span>
+                <strong>Users</strong>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="admin-dashboard-panel admin-dashboard-bookings-panel">
+
+        <div class="admin-dashboard-section-header">
+            <div>
+                <h4>Recent Bookings</h4>
+                <p>Latest reservation activity across the system</p>
+            </div>
+        </div>
+
+        <div class="admin-dashboard-table-wrap">
+
+            <table class="table admin-dashboard-table">
+
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>User</th>
+                        <th>Passenger</th>
+                        <th>Flight</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Airline</th>
+                        <th>Booking Date</th>
+                        <th>Total Price</th>
+                        <th>Booking Status</th>
+                        <th>Payment Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var booking in Model)
+                    {
+                        var bookingStatus = booking.Status ?? "N/A";
+                        var paymentStatus = booking.Payment?.PaymentStatus ?? "Pending";
+
+                        <tr>
+                            <td>@booking.BookingId</td>
+                            <td>@(booking.User?.FullName ?? "N/A")</td>
+                            <td>@(booking.Passenger == null ? "N/A" : $"{booking.Passenger.FirstName} {booking.Passenger.LastName}")</td>
+                            <td>@(booking.Flight?.FlightNumber ?? "N/A")</td>
+                            <td>@(booking.Flight?.FromAirport?.Code ?? "N/A")</td>
+                            <td>@(booking.Flight?.ToAirport?.Code ?? "N/A")</td>
+                            <td>@(booking.Flight?.Airline?.Name ?? "N/A")</td>
+                            <td>@booking.BookingDate.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>JOD @booking.TotalPrice</td>
+                            <td>
+                                <span class="@BookingBadgeClass(bookingStatus)">
+                                    @bookingStatus
+                                </span>
+                            </td>
+                            <td>
+                                <span class="@PaymentBadgeClass(paymentStatus)">
+                                    @paymentStatus
+                                </span>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>

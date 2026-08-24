@@ -1,0 +1,66 @@
+@model List<FlyBook.Models.Payment>
+
+@{
+    ViewData["Title"] = "Payments";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Payments</h2>
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>Payment ID</th>
+                <th>Booking</th>
+                <th>User</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Method</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var payment in Model)
+            {
+                <tr>
+
+                    <td>
+                        @payment.PaymentId
+                    </td>
+
+                    <td>
+                        @(payment.Booking?.BookingNumber ?? "N/A")
+                    </td>
+
+                    <td>
+                        @(payment.Booking?.User?.FullName ?? "N/A")
+                    </td>
+
+                    <td>
+                        JOD @payment.Amount
+                    </td>
+
+                    <td>
+                        @payment.PaymentDate.ToString("dd/MM/yyyy HH:mm")
+                    </td>
+
+                    <td>
+                        @payment.PaymentMethod
+                    </td>
+
+                    <td>
+                        @payment.PaymentStatus
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

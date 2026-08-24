@@ -1,0 +1,119 @@
+@model FlyBook.Models.Booking
+
+@{
+    ViewData["Title"] = "Ticket";
+    var isAdminView = Context.Session.GetString("Role") == "Admin";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Ticket
+    </h2>
+
+    <div class="card shadow-sm">
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <p>
+                        <strong>Ticket Number:</strong>
+                        @(Model.Ticket?.TicketNumber ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Booking Number:</strong>
+                        @Model.BookingNumber
+                    </p>
+
+                    <p>
+                        <strong>Issue Date:</strong>
+                        @(Model.Ticket?.IssueDate.ToString("dd/MM/yyyy HH:mm") ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Passenger Name:</strong>
+                        @(Model.Passenger == null ? "N/A" : $"{Model.Passenger.FirstName} {Model.Passenger.LastName}")
+                    </p>
+
+                    <p>
+                        <strong>Total Price:</strong>
+                        JOD @Model.TotalPrice
+                    </p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <p>
+                        <strong>Airline:</strong>
+                        @(Model.Flight?.Airline?.Name ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Flight Number:</strong>
+                        @(Model.Flight?.FlightNumber ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>From Airport:</strong>
+                        @(Model.Flight?.FromAirport?.Name ?? "N/A")
+                        (@(Model.Flight?.FromAirport?.Code ?? "N/A"))
+                    </p>
+
+                    <p>
+                        <strong>To Airport:</strong>
+                        @(Model.Flight?.ToAirport?.Name ?? "N/A")
+                        (@(Model.Flight?.ToAirport?.Code ?? "N/A"))
+                    </p>
+
+                    <p>
+                        <strong>Departure:</strong>
+                        @(Model.Flight?.DepartureDateTime.ToString("dd/MM/yyyy HH:mm") ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Arrival:</strong>
+                        @(Model.Flight?.ArrivalDateTime.ToString("dd/MM/yyyy HH:mm") ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Payment Status:</strong>
+                        @(Model.Payment?.PaymentStatus ?? "Pending")
+                    </p>
+
+                </div>
+
+            </div>
+
+            <hr />
+
+            @if (isAdminView)
+            {
+                <a asp-controller="Admin"
+                   asp-action="Bookings"
+                   class="btn btn-secondary">
+
+                    Back to Bookings
+
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Booking"
+                   asp-action="Index"
+                   class="btn btn-secondary">
+
+                    My Bookings
+
+                </a>
+            }
+
+        </div>
+
+    </div>
+
+</div>

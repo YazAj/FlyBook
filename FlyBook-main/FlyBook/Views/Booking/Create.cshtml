@@ -1,0 +1,221 @@
+@model FlyBook.Models.Passenger
+
+@{
+    ViewData["Title"] = "Passenger Details";
+
+    var flight = ViewBag.Flight as FlyBook.Models.Flight;
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Passenger Details
+    </h2>
+
+
+    @if (flight != null)
+    {
+        <div class="card mb-4">
+
+            <div class="card-body">
+
+                <h5>
+                    Flight Summary
+                </h5>
+
+                <p>
+                    <strong>
+                        @flight.Airline?.Name
+                    </strong>
+
+                    - @flight.FlightNumber
+                </p>
+
+                <p>
+
+                    @flight.FromAirport?.Code
+
+                    →
+
+                    @flight.ToAirport?.Code
+
+                </p>
+
+                <p>
+                    JOD @flight.Price
+                </p>
+
+                <p>
+                    Seats Available:
+                    <strong>@flight.AvailableSeats</strong>
+                </p>
+
+            </div>
+
+        </div>
+    }
+
+
+    <form asp-controller="Booking"
+          asp-action="Create"
+          method="post">
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-danger mb-3">
+        </div>
+
+        <input type="hidden"
+               name="flightId"
+               value="@flight?.FlightId" />
+
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label asp-for="FirstName"
+                       class="form-label">
+                    First Name
+                </label>
+
+                <input asp-for="FirstName"
+                       class="form-control" />
+
+                <span asp-validation-for="FirstName"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+
+                <label asp-for="LastName"
+                       class="form-label">
+                    Last Name
+                </label>
+
+                <input asp-for="LastName"
+                       class="form-control" />
+
+                <span asp-validation-for="LastName"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label asp-for="DateOfBirth"
+                       class="form-label">
+
+                    Date of Birth
+
+                </label>
+
+                <input asp-for="DateOfBirth"
+                       type="date"
+                       class="form-control" />
+
+                <span asp-validation-for="DateOfBirth"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="col-md-6 mb-3">
+
+                <label asp-for="Nationality"
+                       class="form-label">
+                    Nationality
+                </label>
+
+                <input asp-for="Nationality"
+                       class="form-control" />
+
+                <span asp-validation-for="Nationality"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="mb-3">
+
+            <label asp-for="PassportNumber"
+                   class="form-label">
+
+                Passport Number
+
+            </label>
+
+            <input asp-for="PassportNumber"
+                   class="form-control" />
+
+            <span asp-validation-for="PassportNumber"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+
+        <div class="mb-3">
+
+            <label asp-for="Email"
+                   class="form-label">
+
+                Email
+
+            </label>
+
+            <input asp-for="Email"
+                   class="form-control" />
+
+            <span asp-validation-for="Email"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+
+        <div class="mb-3">
+
+            <label asp-for="Phone"
+                   class="form-label">
+
+                Phone
+
+            </label>
+
+            <input asp-for="Phone"
+                   class="form-control" />
+
+            <span asp-validation-for="Phone"
+                  class="text-danger">
+            </span>
+
+        </div>
+
+
+        <button type="submit"
+                class="btn btn-primary">
+
+            Continue to Payment
+
+        </button>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

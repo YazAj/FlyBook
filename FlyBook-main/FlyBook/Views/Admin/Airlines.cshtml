@@ -1,0 +1,77 @@
+@model List<FlyBook.Models.Airline>
+
+@{
+    ViewData["Title"] = "Airlines";
+}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Airlines</h2>
+
+        <a asp-action="CreateAirline"
+           class="btn btn-primary">
+
+            Add Airline
+
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Logo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var airline in Model)
+            {
+                <tr>
+                    <td>@airline.AirlineId</td>
+                    <td>@airline.Name</td>
+                    <td>@(airline.Logo ?? "N/A")</td>
+                    <td>
+                        <a asp-action="EditAirline"
+                           asp-route-id="@airline.AirlineId"
+                           class="btn btn-warning btn-sm">
+
+                            Edit
+
+                        </a>
+
+                        <a asp-action="DeleteAirline"
+                           asp-route-id="@airline.AirlineId"
+                           class="btn btn-danger btn-sm">
+
+                            Delete
+
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

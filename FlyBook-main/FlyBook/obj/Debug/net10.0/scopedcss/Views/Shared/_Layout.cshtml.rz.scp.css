@@ -1,0 +1,260 @@
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* ======================================
+   GLOBAL
+====================================== */
+
+html[b-ufler0oqud],
+body[b-ufler0oqud] {
+    min-height: 100%;
+    margin: 0;
+}
+
+.flybook-body[b-ufler0oqud] {
+    min-height: 100vh;
+    background: linear-gradient( 135deg, #061f3f 0%, #082f5e 55%, #0b477d 100% ) !important;
+    color: white;
+}
+
+.flybook-wrapper[b-ufler0oqud] {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: transparent !important;
+}
+
+
+/* ======================================
+   NAVBAR
+====================================== */
+
+.flybook-navbar[b-ufler0oqud] {
+    min-height: 72px;
+    padding: 0 28px;
+    background: rgba(5, 24, 48, 0.96) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    z-index: 1000;
+}
+
+
+.flybook-brand[b-ufler0oqud] {
+    margin-right: 30px;
+    color: white !important;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+
+    .flybook-brand span[b-ufler0oqud] {
+        color: #eab64d;
+    }
+
+
+    .flybook-brand .brand-plane[b-ufler0oqud] {
+        color: white;
+        margin-right: 5px;
+    }
+
+
+.flybook-navbar .nav-link[b-ufler0oqud] {
+    position: relative;
+    color: rgba(255,255,255,0.77) !important;
+    padding: 24px 14px !important;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+
+    .flybook-navbar .nav-link:hover[b-ufler0oqud] {
+        color: #eab64d !important;
+    }
+
+
+    .flybook-navbar .nav-link[b-ufler0oqud]::after {
+        content: "";
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #eab64d;
+        transform: translateX(-50%);
+        transition: width 0.25s ease;
+    }
+
+
+    .flybook-navbar .nav-link:hover[b-ufler0oqud]::after {
+        width: 45%;
+    }
+
+
+/* Register button */
+
+.register-nav-btn[b-ufler0oqud] {
+    margin-left: 5px;
+}
+
+
+    .register-nav-btn[b-ufler0oqud]::after {
+        display: none;
+    }
+
+
+/* logout */
+
+.logout-link[b-ufler0oqud] {
+    color: #ff7373 !important;
+}
+
+
+    .logout-link:hover[b-ufler0oqud] {
+        color: #ff9a9a !important;
+    }
+
+
+.user-name-link[b-ufler0oqud] {
+    color: #eab64d !important;
+}
+
+
+/* ======================================
+   MOBILE NAVBAR
+====================================== */
+
+.navbar-toggler[b-ufler0oqud] {
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+    .navbar-toggler:focus[b-ufler0oqud] {
+        box-shadow: none;
+    }
+
+
+.navbar-toggler-icon[b-ufler0oqud] {
+    filter: invert(1);
+}
+
+
+/* ======================================
+   MAIN CONTENT
+====================================== */
+
+.flybook-main[b-ufler0oqud] {
+    flex: 1;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+
+.flybook-content[b-ufler0oqud] {
+    min-height: calc(100vh - 130px);
+    width: 100%;
+    background: transparent !important;
+}
+
+
+/* Remove AdminLTE sidebar spacing */
+
+.app-main[b-ufler0oqud],
+.app-content[b-ufler0oqud],
+.app-wrapper[b-ufler0oqud] {
+    margin-left: 0 !important;
+    margin-inline-start: 0 !important;
+    background: transparent !important;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+.flybook-footer[b-ufler0oqud] {
+    padding: 18px 28px;
+    background: rgba(5, 24, 48, 0.96);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: white;
+}
+
+
+.footer-text[b-ufler0oqud] {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 991px) {
+
+    .flybook-navbar[b-ufler0oqud] {
+        padding: 10px 18px;
+    }
+
+        .flybook-navbar
+        .navbar-collapse[b-ufler0oqud] {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 14px;
+            background: #061f3f;
+        }
+
+        .flybook-navbar
+        .nav-link[b-ufler0oqud] {
+            padding: 11px 12px !important;
+        }
+
+            .flybook-navbar
+            .nav-link[b-ufler0oqud]::after {
+                display: none;
+            }
+}
+
+a[b-ufler0oqud] {
+  color: #0077cc;
+}
+
+.btn-primary[b-ufler0oqud] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-ufler0oqud], .nav-pills .show > .nav-link[b-ufler0oqud] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-ufler0oqud] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ufler0oqud] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ufler0oqud] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ufler0oqud] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-ufler0oqud] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

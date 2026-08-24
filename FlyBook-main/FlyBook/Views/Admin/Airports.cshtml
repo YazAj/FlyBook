@@ -1,0 +1,81 @@
+@model List<FlyBook.Models.Airport>
+
+@{
+    ViewData["Title"] = "Airports";
+}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Airports</h2>
+
+        <a asp-action="CreateAirport"
+           class="btn btn-primary">
+
+            Add Airport
+
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Airport</th>
+                <th>Code</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var airport in Model)
+            {
+                <tr>
+                    <td>@airport.AirportId</td>
+                    <td>@airport.Name</td>
+                    <td>@airport.Code</td>
+                    <td>@airport.City</td>
+                    <td>@airport.Country</td>
+                    <td>
+                        <a asp-action="EditAirport"
+                           asp-route-id="@airport.AirportId"
+                           class="btn btn-warning btn-sm">
+
+                            Edit
+
+                        </a>
+
+                        <a asp-action="DeleteAirport"
+                           asp-route-id="@airport.AirportId"
+                           class="btn btn-danger btn-sm">
+
+                            Delete
+
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

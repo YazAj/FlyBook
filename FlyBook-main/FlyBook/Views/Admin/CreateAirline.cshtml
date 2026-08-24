@@ -1,0 +1,58 @@
+@model FlyBook.ViewModels.Admin.AdminAirlineViewModel
+
+@{
+    ViewData["Title"] = "Add Airline";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Add Airline</h2>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <form asp-action="CreateAirline"
+                  method="post">
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3">
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Logo" class="form-label">Logo</label>
+                    <input asp-for="Logo" class="form-control" />
+                    <span asp-validation-for="Logo" class="text-danger"></span>
+                </div>
+
+                <button type="submit"
+                        class="btn btn-success">
+
+                    Save
+
+                </button>
+
+                <a asp-action="Airlines"
+                   class="btn btn-secondary">
+
+                    Back
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

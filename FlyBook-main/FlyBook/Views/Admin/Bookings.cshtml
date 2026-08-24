@@ -1,0 +1,78 @@
+@model List<FlyBook.Models.Booking>
+
+@{
+    ViewData["Title"] = "Bookings";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Bookings</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    <table class="table table-bordered table-striped">
+
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>Passenger Name</th>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>From Airport</th>
+                <th>To Airport</th>
+                <th>Departure Date</th>
+                <th>Booking Date</th>
+                <th>Total Price</th>
+                <th>Booking Status</th>
+                <th>Payment Status</th>
+                <th>Ticket Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td>@booking.BookingId</td>
+                    <td>@(booking.User?.FullName ?? "N/A")</td>
+                    <td>@(booking.User?.Email ?? "N/A")</td>
+                    <td>@(booking.Passenger == null ? "N/A" : $"{booking.Passenger.FirstName} {booking.Passenger.LastName}")</td>
+                    <td>@(booking.Flight?.Airline?.Name ?? "N/A")</td>
+                    <td>@(booking.Flight?.FlightNumber ?? "N/A")</td>
+                    <td>@(booking.Flight?.FromAirport?.Code ?? "N/A")</td>
+                    <td>@(booking.Flight?.ToAirport?.Code ?? "N/A")</td>
+                    <td>@(booking.Flight?.DepartureDateTime.ToString("dd/MM/yyyy HH:mm") ?? "N/A")</td>
+                    <td>@booking.BookingDate.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>JOD @booking.TotalPrice</td>
+                    <td>@booking.Status</td>
+                    <td>@(booking.Payment?.PaymentStatus ?? "Pending")</td>
+                    <td>@(booking.Ticket?.TicketNumber ?? "N/A")</td>
+                    <td>
+                        @if (booking.Ticket != null)
+                        {
+                            <a asp-action="Ticket"
+                               asp-route-bookingId="@booking.BookingId"
+                               class="btn btn-secondary btn-sm">
+
+                                Ticket
+
+                            </a>
+                        }
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

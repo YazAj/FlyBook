@@ -1,0 +1,87 @@
+﻿
+@model IEnumerable<FlyBook.Models.Flight>
+
+@{
+    ViewData["Title"] = "Flights";
+}
+
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold">Flights</h2>
+            <p class="text-muted mb-0">All available flights</p>
+        </div>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Back to Dashboard
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Flight Number</th>
+                            <th>Airline</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var flight in Model)
+                        {
+                            <tr>
+                                <td>@flight.FlightId</td>
+
+                                <td>
+                                    @flight.FlightNumber
+                                </td>
+
+                                <td>
+                                    @flight.Airline?.Name
+                                </td>
+
+                                <td>
+                                    @flight.FromAirport?.Name
+                                </td>
+
+                                <td>
+                                    @flight.ToAirport?.Name
+                                </td>
+
+                                <td>
+                                    @flight.DepartureDateTime
+                                </td>
+
+                                <td>
+                                    @flight.ArrivalDateTime
+                                </td>
+
+                                <td>
+                                    $@flight.Price
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

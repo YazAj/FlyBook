@@ -1,0 +1,246 @@
+﻿@using FlyBook.Models
+
+@{
+    ViewData["Title"] = "Home";
+    var airports = ViewBag.Airports as List<Airport>;
+}
+
+<div class="container-fluid px-3 px-md-4">
+
+    <!-- HERO -->
+    <section class="flight-hero">
+
+        <div class="flying-plane">
+            ✈
+        </div>
+
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+
+        <div class="hero-content">
+            <span class="hero-badge">
+                ✈ Your Journey Starts Here
+            </span>
+
+            <h1>
+                Fly<span>Book</span>
+            </h1>
+
+            <h3>Find Your Next Flight</h3>
+
+            <p>
+                Search destinations, compare available flights,
+                and book your journey easily.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH CARD -->
+    <section class="search-wrapper">
+
+        <div class="search-card">
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-warning">
+                    @TempData["Error"]
+                </div>
+            }
+
+            <div class="search-card-header">
+
+                <div>
+                    <span class="search-small-title">
+                        BOOK YOUR FLIGHT
+                    </span>
+
+                    <h4>
+                        Where would you like to go?
+                    </h4>
+                </div>
+
+                <div class="search-icon">
+                    ✈
+                </div>
+
+            </div>
+
+
+            <form asp-controller="Flights"
+                  asp-action="Search"
+                  method="get">
+
+                <div class="row g-3 align-items-end">
+
+                    <!-- FROM -->
+                    <div class="col-lg-4 col-md-6">
+
+                        <label class="form-label flight-label">
+                            From
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="field-icon">
+                                🛫
+                            </span>
+
+                            <select name="fromAirportId"
+                                    class="form-select flight-control"
+                                    required>
+
+                                <option value="">
+                                    Select departure airport
+                                </option>
+
+                                @if (airports != null)
+                                {
+                                    foreach (var airport in airports)
+                                    {
+                                        <option value="@airport.AirportId">
+                                            @airport.City (@airport.Code)
+                                        </option>
+                                    }
+                                }
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TO -->
+                    <div class="col-lg-4 col-md-6">
+
+                        <label class="form-label flight-label">
+                            To
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="field-icon">
+                                🛬
+                            </span>
+
+                            <select name="toAirportId"
+                                    class="form-select flight-control"
+                                    required>
+
+                                <option value="">
+                                    Select destination airport
+                                </option>
+
+                                @if (airports != null)
+                                {
+                                    foreach (var airport in airports)
+                                    {
+                                        <option value="@airport.AirportId">
+                                            @airport.City (@airport.Code)
+                                        </option>
+                                    }
+                                }
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATE -->
+                    <div class="col-lg-4 col-md-12">
+
+                        <label class="form-label flight-label">
+                            Departure Date
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="field-icon">
+                                📅
+                            </span>
+
+                            <input type="date"
+                                   name="departureDate"
+                                   class="form-control flight-control"
+                                   required />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="search-button-wrapper">
+
+                    <button type="submit"
+                            class="btn flight-search-btn">
+
+                        <span>
+                            Search Flights
+                        </span>
+
+                        <span class="button-plane">
+                            ✈
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="flight-features">
+
+        <div class="feature-item">
+            <div class="feature-icon">
+                ✓
+            </div>
+
+            <div>
+                <strong>Easy Booking</strong>
+                <span>Simple and fast reservation</span>
+            </div>
+        </div>
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                ✈
+            </div>
+
+            <div>
+                <strong>Multiple Airlines</strong>
+                <span>Choose the best flight</span>
+            </div>
+
+        </div>
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <div>
+                <strong>Secure Payment</strong>
+                <span>Safe booking process</span>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

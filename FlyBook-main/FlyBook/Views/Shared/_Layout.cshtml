@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - FlyBook</title>
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+
+    <!-- AdminLTE -->
+    <link rel="stylesheet"
+          href="~/adminlte/css/adminlte.min.css" />
+
+
+    <!-- FlyBook CSS -->
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+</head>
+
+
+<body class="flybook-body">
+
+    @{
+        var currentUserId = Context.Session.GetInt32("UserId");
+        var currentRole = Context.Session.GetString("Role");
+        var isLoggedIn = currentUserId != null;
+        var isAdmin = currentRole == "Admin";
+        var isNormalUser = isLoggedIn && !isAdmin;
+    }
+
+
+    <div class="flybook-page">
+
+
+        <!-- ================================= -->
+        <!-- TOP NAVBAR -->
+        <!-- ================================= -->
+
+        <nav class="navbar navbar-expand-lg flybook-navbar">
+
+            <div class="container-fluid px-4 px-lg-5">
+
+
+                <!-- LOGO -->
+
+                <a asp-controller="Home"
+                   asp-action="Index"
+                   class="navbar-brand flybook-brand">
+
+                    <span class="brand-plane">
+                        ✈
+                    </span>
+
+                    Fly<span>Book</span>
+
+                </a>
+
+
+
+                <!-- MOBILE BUTTON -->
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flyBookMenu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+
+                <!-- MENU -->
+
+                <div class="collapse navbar-collapse"
+                     id="flyBookMenu">
+
+
+                    <!-- LEFT LINKS -->
+
+                    <ul class="navbar-nav me-auto">
+
+                        @if (isAdmin)
+                        {
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Index"
+                                   class="nav-link admin-nav">
+                                    Admin Dashboard
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Bookings"
+                                   class="nav-link">
+                                    Bookings
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Flights"
+                                   class="nav-link">
+                                    Flights
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Users"
+                                   class="nav-link">
+                                    Users
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Airlines"
+                                   class="nav-link">
+                                    Airlines
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Airports"
+                                   class="nav-link">
+                                    Airports
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Admin"
+                                   asp-action="Payments"
+                                   class="nav-link">
+                                    Payments
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+
+                                <a asp-controller="Home"
+                                   asp-action="Index"
+                                   class="nav-link">
+
+                                    Home
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a asp-controller="Flights"
+                                   asp-action="Index"
+                                   class="nav-link">
+
+                                    Flights
+
+                                </a>
+
+                            </li>
+
+                            @if (isNormalUser)
+                            {
+                                <li class="nav-item">
+
+                                    <a asp-controller="Booking"
+                                       asp-action="Index"
+                                       class="nav-link">
+
+                                        My Bookings
+
+                                    </a>
+
+                                </li>
+
+
+                                <li class="nav-item">
+
+                                    <a asp-controller="Account"
+                                       asp-action="Profile"
+                                       class="nav-link">
+
+                                        Profile
+
+                                    </a>
+
+                                </li>
+                            }
+                        }
+
+                    </ul>
+
+
+
+                    <!-- RIGHT LINKS -->
+
+                    <ul class="navbar-nav ms-auto">
+
+
+                        @if (isLoggedIn)
+                        {
+
+                            <li class="nav-item">
+
+                                <a asp-controller="@(isAdmin ? "Admin" : "Account")"
+                                   asp-action="@(isAdmin ? "Index" : "Profile")"
+                                   class="nav-link user-link">
+
+                                    👤
+                                    @Context.Session.GetString("UserName")
+
+                                </a>
+
+                            </li>
+
+
+                            <li class="nav-item">
+
+                                <a asp-controller="@(isAdmin ? "Admin" : "Account")"
+                                   asp-action="Logout"
+                                   class="nav-link logout-link">
+
+                                    Logout
+
+                                </a>
+
+                            </li>
+
+                        }
+
+                        else
+                        {
+
+                            <li class="nav-item">
+
+                                <a asp-controller="Account"
+                                   asp-action="Login"
+                                   class="nav-link">
+
+                                    Login
+
+                                </a>
+
+                            </li>
+
+
+                            <li class="nav-item">
+
+                                <a asp-controller="Account"
+                                   asp-action="Register"
+                                   class="nav-link register-link">
+
+                                    Register
+
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a asp-controller="Admin"
+                                   asp-action="Login"
+                                   class="nav-link">
+
+                                    Admin Login
+
+                                </a>
+
+                            </li>
+
+                        }
+
+
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- ================================= -->
+        <!-- PAGE CONTENT -->
+        <!-- ================================= -->
+
+        <main class="flybook-main">
+
+            @RenderBody()
+
+        </main>
+
+
+
+        <!-- ================================= -->
+        <!-- FOOTER -->
+        <!-- ================================= -->
+
+        <footer class="flybook-footer">
+
+            <div class="container-fluid px-4 px-lg-5">
+
+                <div class="d-flex
+                    justify-content-between
+                    align-items-center">
+
+                    <div>
+
+                        <strong>
+                            ✈ FlyBook
+                        </strong>
+
+                        <span>
+                            © 2026
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        Flight Booking System
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- Bootstrap -->
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- AdminLTE -->
+
+    <script src="~/adminlte/js/adminlte.min.js">
+    </script>
+
+
+    <!-- Site -->
+
+    <script src="~/js/site.js"
+            asp-append-version="true">
+    </script>
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+</body>
+
+</html>

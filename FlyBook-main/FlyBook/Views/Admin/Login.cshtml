@@ -1,0 +1,108 @@
+@model FlyBook.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<div class="login-page">
+
+    <!-- Animated planes -->
+    <div class="login-plane login-plane-1">✈</div>
+    <div class="login-plane login-plane-2">✈</div>
+    <div class="login-plane login-plane-3">✈</div>
+
+    <div class="login-card">
+
+        <div class="login-brand">
+
+            <div class="login-logo">
+                ✈
+            </div>
+
+            <h1>
+                Fly<span>Book</span>
+            </h1>
+
+            <p>
+                Admin login to manage the system.
+            </p>
+
+        </div>
+
+
+        <div asp-validation-summary="ModelOnly"
+             class="text-danger mb-3">
+        </div>
+
+
+        <form asp-controller="Admin"
+              asp-action="Login"
+              method="post">
+
+            <div class="mb-3">
+
+                <label asp-for="Email"
+                       class="form-label">
+                    Email
+                </label>
+
+                <input asp-for="Email"
+                       class="form-control login-control"
+                       placeholder="admin@flybook.com" />
+
+                <span asp-validation-for="Email"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <div class="mb-3">
+
+                <label asp-for="Password"
+                       class="form-label">
+                    Password
+                </label>
+
+                <input asp-for="Password"
+                       class="form-control login-control"
+                       placeholder="Enter admin password" />
+
+                <span asp-validation-for="Password"
+                      class="text-danger">
+                </span>
+
+            </div>
+
+
+            <button type="submit"
+                    class="login-btn">
+
+                Admin Login
+                <span>✈</span>
+
+            </button>
+
+        </form>
+
+
+        <div class="login-register">
+
+            User account?
+
+            <a asp-controller="Account"
+               asp-action="Login">
+
+                Login here
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

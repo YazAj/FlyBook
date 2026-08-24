@@ -1,0 +1,136 @@
+@model List<FlyBook.Models.Booking>
+
+@{
+    ViewData["Title"] = "My Bookings";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        My Bookings
+    </h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-info">
+
+            You don't have any bookings.
+
+        </div>
+    }
+    else
+    {
+        <table class="table table-bordered">
+
+            <thead>
+
+                <tr>
+
+                    <th>Booking Number</th>
+                    <th>Flight</th>
+                    <th>Route</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Payment</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var booking in Model)
+                {
+                    var paymentStatus = booking.Payment?.PaymentStatus ?? "Pending";
+
+                    <tr>
+
+                        <td>
+                            @booking.BookingNumber
+                        </td>
+
+                        <td>
+                            @(booking.Flight?.FlightNumber ?? "N/A")
+                        </td>
+
+                        <td>
+
+                            @(booking.Flight?.FromAirport?.Code ?? "N/A")
+
+                            →
+
+                            @(booking.Flight?.ToAirport?.Code ?? "N/A")
+
+                        </td>
+
+                        <td>
+                            @booking.BookingDate.ToString("dd/MM/yyyy")
+                        </td>
+
+                        <td>
+                            JOD @booking.TotalPrice
+                        </td>
+
+                        <td>
+                            @booking.Status
+                        </td>
+
+                        <td>
+                            @paymentStatus
+                        </td>
+
+                        <td>
+
+                            <a asp-controller="Booking"
+                               asp-action="Details"
+                               asp-route-id="@booking.BookingId"
+                               class="btn btn-primary btn-sm">
+
+                                Details
+
+                            </a>
+
+                            @if (paymentStatus != "Paid" && booking.Status != "Cancelled")
+                            {
+                                <a asp-controller="Payment"
+                                   asp-action="Pay"
+                                   asp-route-bookingId="@booking.BookingId"
+                                   class="btn btn-success btn-sm">
+
+                                    Pay
+
+                                </a>
+                            }
+
+                            @if (booking.Ticket != null && paymentStatus == "Paid")
+                            {
+                                <a asp-controller="Booking"
+                                   asp-action="Ticket"
+                                   asp-route-id="@booking.BookingId"
+                                   class="btn btn-secondary btn-sm">
+
+                                    Ticket
+
+                                </a>
+                            }
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    }
+
+</div>

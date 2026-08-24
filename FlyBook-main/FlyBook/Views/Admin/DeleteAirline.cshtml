@@ -1,0 +1,48 @@
+@model FlyBook.Models.Airline
+
+@{
+    ViewData["Title"] = "Delete Airline";
+}
+
+<div class="container mt-5">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h2>Delete Airline</h2>
+
+            <p class="mt-3">
+                Are you sure you want to delete airline
+                <strong>@Model.Name</strong>
+                ?
+            </p>
+
+            <form asp-action="DeleteAirlineConfirmed"
+                  method="post">
+
+                <input type="hidden"
+                       name="id"
+                       value="@Model.AirlineId" />
+
+                <button type="submit"
+                        class="btn btn-danger">
+
+                    Delete
+
+                </button>
+
+                <a asp-action="Airlines"
+                   class="btn btn-secondary">
+
+                    Back
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

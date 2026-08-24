@@ -1,0 +1,761 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C#\\FlyBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\controllers\\flightscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\controllers\\flightscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\flights\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\flights\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\payments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\bookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\bookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\airports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\airports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\airlines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\airlines.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\flights.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\flights.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\controllers\\admin controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\controllers\\admin controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\payments\\pay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\payments\\pay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\bookings\\cancelbooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\bookings\\cancelbooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\bookings\\editbooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\bookings\\editbooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\passenger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\viewmodels\\adminairportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\viewmodels\\adminairportviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\viewmodels\\adminairlineviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\viewmodels\\adminairlineviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\viewmodels\\adminflightviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\viewmodels\\adminflightviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\models\\airpot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\models\\airpot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\migrations\\20260820131127_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\migrations\\20260820131127_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|d:\\c#\\flybook\\flybook\\flybook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0CB872CA-C978-0A9F-6AC5-C42D21721824}|FlyBook\\FlyBook.csproj|solutionrelative:flybook\\flybook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Admin Controller.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\Admin Controller.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Controllers\\Admin Controller.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\Admin Controller.cs",
+              "RelativeToolTip": "FlyBook\\Controllers\\Admin Controller.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAwEoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T11:16:53.858Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FlightsController.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\FlightsController.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Controllers\\FlightsController.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\FlightsController.cs",
+              "RelativeToolTip": "FlyBook\\Controllers\\FlightsController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwC4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T13:35:12.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Flights\\Index.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Flights\\Index.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Flights\\Index.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Flights\\Index.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAiwGkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T14:30:48.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwCUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:24:19.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Payments.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Payments.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Payments.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Payments.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Payments.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:29:32.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bookings.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Bookings.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Bookings.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Bookings.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Bookings.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwEMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:28:49.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Airports.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Airports.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Airports.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Airports.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Airports.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwCcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:27:04.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Airlines.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Airlines.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Airlines.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Airlines.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Airlines.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwCMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:25:30.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Flights.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Flights.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Flights.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Flights.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Flights.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwC8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:27:55.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwDsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T11:23:21.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Pay.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Payments\\Pay.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Payments\\Pay.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Payments\\Pay.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Payments\\Pay.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-21T17:32:23.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CancelBooking.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\CancelBooking.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Bookings\\CancelBooking.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\CancelBooking.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Bookings\\CancelBooking.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwEIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T20:07:11.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EditBooking.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\EditBooking.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Bookings\\EditBooking.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\EditBooking.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Bookings\\EditBooking.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAYwFwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T19:51:59.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\Create.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Bookings\\Create.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\Create.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Bookings\\Create.cshtml",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAYwLsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T19:17:44.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\Index.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Bookings\\Index.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Bookings\\Index.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Bookings\\Index.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAYwGoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T19:06:05.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAYwHoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T14:06:39.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Account\\Profile.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Account\\Profile.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwDEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T19:03:26.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAYwFkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T18:34:53.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwDAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-20T18:52:38.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "FlyBook\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:57:29.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Controllers\\BookingsController.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "FlyBook\\Controllers\\BookingsController.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAqwLEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T21:41:37.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Controllers\\PaymentsController.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "FlyBook\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAiwFoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T13:54:17.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FlyBook\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAiwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T13:10:43.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Program.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Program.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Program.cs",
+              "RelativeToolTip": "FlyBook\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T11:43:37.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\appsettings.json",
+              "RelativeDocumentMoniker": "FlyBook\\appsettings.json",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\appsettings.json",
+              "RelativeToolTip": "FlyBook\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-20T11:43:10.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "FlyBook\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T13:05:57.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Data\\DbSeeder.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "FlyBook\\Data\\DbSeeder.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwBcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T13:19:56.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "FlyBook\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T11:29:04.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\Booking.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\Booking.cs",
+              "RelativeToolTip": "FlyBook\\Models\\Booking.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T11:00:29.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Flight.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\Flight.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\Flight.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\Flight.cs",
+              "RelativeToolTip": "FlyBook\\Models\\Flight.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:59:39.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Passenger.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\Passenger.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\Passenger.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\Passenger.cs",
+              "RelativeToolTip": "FlyBook\\Models\\Passenger.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T11:00:07.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\Payment.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\Payment.cs",
+              "RelativeToolTip": "FlyBook\\Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T11:00:47.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\User.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\User.cs",
+              "RelativeToolTip": "FlyBook\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:58:06.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AdminAirportViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\AdminAirportViewModel.cs",
+              "RelativeDocumentMoniker": "FlyBook\\ViewModels\\AdminAirportViewModel.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\AdminAirportViewModel.cs",
+              "RelativeToolTip": "FlyBook\\ViewModels\\AdminAirportViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T11:19:47.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Airline.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\Airline.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\Airline.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\Airline.cs",
+              "RelativeToolTip": "FlyBook\\Models\\Airline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:58:48.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AdminAirlineViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\AdminAirlineViewModel.cs",
+              "RelativeDocumentMoniker": "FlyBook\\ViewModels\\AdminAirlineViewModel.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\AdminAirlineViewModel.cs",
+              "RelativeToolTip": "FlyBook\\ViewModels\\AdminAirlineViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T11:19:10.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AdminFlightViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\AdminFlightViewModel.cs",
+              "RelativeDocumentMoniker": "FlyBook\\ViewModels\\AdminFlightViewModel.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\AdminFlightViewModel.cs",
+              "RelativeToolTip": "FlyBook\\ViewModels\\AdminFlightViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T11:21:06.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Airpot.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\Airpot.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\Airpot.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\Airpot.cs",
+              "RelativeToolTip": "FlyBook\\Models\\Airpot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:59:12.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "FlyBook\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:57:33.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PaymentViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\PaymentViewModel.cs",
+              "RelativeDocumentMoniker": "FlyBook\\ViewModels\\PaymentViewModel.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\ViewModels\\PaymentViewModel.cs",
+              "RelativeToolTip": "FlyBook\\ViewModels\\PaymentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T16:45:09.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20260820131127_InitialCreate.cs",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Migrations\\20260820131127_InitialCreate.cs",
+              "RelativeDocumentMoniker": "FlyBook\\Migrations\\20260820131127_InitialCreate.cs",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Migrations\\20260820131127_InitialCreate.cs",
+              "RelativeToolTip": "FlyBook\\Migrations\\20260820131127_InitialCreate.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwA4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T13:11:27.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-21T20:29:45.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "FlyBook\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "FlyBook\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-21T20:29:49.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FlyBook.csproj",
+              "DocumentMoniker": "D:\\C#\\FlyBook\\FlyBook\\FlyBook.csproj",
+              "RelativeDocumentMoniker": "FlyBook\\FlyBook.csproj",
+              "ToolTip": "D:\\C#\\FlyBook\\FlyBook\\FlyBook.csproj",
+              "RelativeToolTip": "FlyBook\\FlyBook.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-20T11:27:03.451Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

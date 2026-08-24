@@ -1,0 +1,1646 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-sidebar {
+    background: #08264d !important;
+}
+
+.sidebar-brand {
+    background: #061d3b;
+}
+
+.brand-link {
+    color: white !important;
+    text-decoration: none;
+}
+
+.brand-text {
+    font-size: 22px;
+}
+
+.sidebar-menu .nav-link {
+    color: #dfe8f5;
+    border-radius: 8px;
+    margin: 3px 8px;
+}
+
+    .sidebar-menu .nav-link:hover {
+        background: #0d6efd;
+        color: white;
+    }
+
+.app-header {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.app-main {
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+}
+/* =================================
+   FlyBook Home Page
+================================= */
+
+.flight-hero {
+    position: relative;
+    min-height: 330px;
+    margin: 25px 0 0;
+    border-radius: 22px;
+    overflow: hidden;
+    background: radial-gradient( circle at 80% 25%, rgba(13, 110, 253, 0.25), transparent 35% ), linear-gradient( 135deg, #061b35 0%, #082e5d 55%, #0b4b88 100% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+    padding: 50px 20px;
+    color: white;
+}
+
+
+.hero-badge {
+    display: inline-block;
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+
+    .hero-content h1 span {
+        color: #eab64d;
+    }
+
+
+.hero-content h3 {
+    margin-top: 8px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.hero-content p {
+    max-width: 580px;
+    margin: 14px auto 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+}
+
+
+/* Moving Plane */
+
+.flying-plane {
+    position: absolute;
+    z-index: 2;
+    top: 55px;
+    left: -100px;
+    font-size: 48px;
+    opacity: 0.18;
+    animation: planeFlight 16s linear infinite;
+}
+
+
+@keyframes planeFlight {
+
+    0% {
+        left: -100px;
+        transform: translateY(30px) rotate(8deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+
+    100% {
+        left: calc(100% + 100px);
+        transform: translateY(10px) rotate(8deg);
+    }
+}
+
+
+/* Glow */
+
+.hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.hero-glow-one {
+    width: 220px;
+    height: 220px;
+    right: 8%;
+    top: -70px;
+    background: rgba(0, 153, 255, 0.2);
+}
+
+.hero-glow-two {
+    width: 260px;
+    height: 260px;
+    left: 5%;
+    bottom: -120px;
+    background: rgba(234, 182, 77, 0.12);
+}
+
+
+/* =================================
+   Search Card
+================================= */
+
+.search-wrapper {
+    position: relative;
+    z-index: 5;
+    max-width: 1120px;
+    margin: -45px auto 0;
+}
+
+
+.search-card {
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(24, 29, 34, 0.96);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    animation: cardAppear 0.7s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.search-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+
+.search-small-title {
+    color: #eab64d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+.search-card-header h4 {
+    margin: 4px 0 0;
+    font-size: 22px;
+    color: white;
+}
+
+
+.search-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13, 110, 253, 0.15);
+    font-size: 25px;
+}
+
+
+/* Inputs */
+
+.flight-label {
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.82);
+    font-weight: 500;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.field-icon {
+    position: absolute;
+    z-index: 5;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    pointer-events: none;
+}
+
+
+.flight-control {
+    min-height: 52px;
+    padding-left: 45px;
+    border: 1px solid #43505d;
+    border-radius: 11px;
+    background: #20262c;
+    color: white;
+    transition: 0.25s ease;
+}
+
+
+    .flight-control:focus {
+        border-color: #eab64d;
+        box-shadow: 0 0 0 3px rgba(234, 182, 77, 0.12);
+        background: #20262c;
+        color: white;
+    }
+
+
+    .flight-control option {
+        background: #20262c;
+        color: white;
+    }
+
+
+/* Search Button */
+
+.search-button-wrapper {
+    margin-top: 24px;
+}
+
+
+.flight-search-btn {
+    width: 100%;
+    min-height: 54px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient( 90deg, #dca73d, #efc565 );
+    color: #071d39;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+
+    .flight-search-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(234, 182, 77, 0.22);
+        color: #071d39;
+    }
+
+
+.button-plane {
+    transition: transform 0.3s ease;
+}
+
+
+.flight-search-btn:hover
+.button-plane {
+    transform: translateX(7px);
+}
+
+
+/* =================================
+   Features
+================================= */
+
+.flight-features {
+    max-width: 900px;
+    margin: 35px auto 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 18px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+
+.feature-icon {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(234, 182, 77, 0.12);
+    color: #eab64d;
+    font-weight: bold;
+}
+
+
+.feature-item strong {
+    display: block;
+    color: white;
+    font-size: 14px;
+}
+
+
+.feature-item span {
+    display: block;
+    margin-top: 2px;
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .flight-hero {
+        min-height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-content h3 {
+        font-size: 23px;
+    }
+
+    .search-wrapper {
+        margin-top: -30px;
+    }
+
+    .search-card {
+        padding: 20px;
+    }
+
+    .flight-features {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================
+   REGISTER PAGE
+===================================== */
+
+.register-page {
+    position: relative;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 50px 20px;
+    background: radial-gradient( circle at 15% 20%, rgba(13, 110, 253, 0.22), transparent 28% ), radial-gradient( circle at 85% 80%, rgba(234, 182, 77, 0.15), transparent 30% ), linear-gradient( 135deg, #04172d 0%, #082b54 45%, #0c4a82 100% );
+}
+
+
+/* =====================================
+   CARD
+===================================== */
+
+.register-card {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 500px;
+    padding: 38px;
+    border-radius: 22px;
+    background: rgba(18, 24, 31, 0.93);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(16px);
+    animation: registerCardAppear 0.8s ease;
+}
+
+
+@keyframes registerCardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =====================================
+   BRAND
+===================================== */
+
+.register-brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.register-logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #071d39;
+    background: linear-gradient( 135deg, #e3ad40, #f3ca70 );
+    box-shadow: 0 10px 30px rgba(234, 182, 77, 0.25);
+}
+
+
+.register-brand h1 {
+    margin: 0;
+    color: white;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+    .register-brand h1 span {
+        color: #eab64d;
+    }
+
+
+.register-brand p {
+    margin-top: 8px;
+    color: rgba(255,255,255,0.58);
+    font-size: 14px;
+}
+
+
+/* =====================================
+   FORM
+===================================== */
+
+.register-card .form-label {
+    color: rgba(255,255,255,0.84);
+    font-weight: 500;
+}
+
+
+.register-control {
+    min-height: 50px;
+    border-radius: 11px;
+    border: 1px solid #44515e;
+    background: #20262d;
+    color: white;
+    transition: 0.25s ease;
+}
+
+
+    .register-control::placeholder {
+        color: rgba(255,255,255,0.35);
+    }
+
+
+    .register-control:focus {
+        background: #20262d;
+        color: white;
+        border-color: #eab64d;
+        box-shadow: 0 0 0 3px rgba(234,182,77,0.12);
+    }
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.register-btn {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 11px;
+    background: linear-gradient( 90deg, #dda73c, #f0c765 );
+    color: #071d39;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+
+    .register-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(234,182,77,0.25);
+    }
+
+
+    .register-btn span {
+        transition: 0.25s ease;
+    }
+
+
+    .register-btn:hover span {
+        transform: translateX(7px);
+    }
+
+
+/* =====================================
+   LOGIN LINK
+===================================== */
+
+.register-login {
+    text-align: center;
+    margin-top: 22px;
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+}
+
+
+    .register-login a {
+        color: #eab64d;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+
+        .register-login a:hover {
+            text-decoration: underline;
+        }
+
+
+/* =====================================
+   PLANES
+===================================== */
+
+.plane {
+    position: absolute;
+    z-index: 2;
+    color: rgba(255,255,255,0.15);
+    pointer-events: none;
+}
+
+
+/* Plane 1 */
+
+.plane-1 {
+    top: 12%;
+    left: -100px;
+    font-size: 50px;
+    animation: flyOne 15s linear infinite;
+}
+
+
+@keyframes flyOne {
+
+    0% {
+        left: -100px;
+        transform: translateY(20px) rotate(8deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(5deg);
+    }
+
+    100% {
+        left: calc(100% + 100px);
+        transform: translateY(10px) rotate(8deg);
+    }
+}
+
+
+/* Plane 2 */
+
+.plane-2 {
+    top: 35%;
+    right: -100px;
+    font-size: 36px;
+    transform: scaleX(-1);
+    animation: flyTwo 19s linear infinite;
+}
+
+
+@keyframes flyTwo {
+
+    0% {
+        right: -100px;
+        transform: scaleX(-1) translateY(-10px) rotate(4deg);
+    }
+
+    50% {
+        transform: scaleX(-1) translateY(35px) rotate(7deg);
+    }
+
+    100% {
+        right: calc(100% + 100px);
+        transform: scaleX(-1) translateY(-5px) rotate(4deg);
+    }
+}
+
+
+/* Plane 3 */
+
+.plane-3 {
+    bottom: 18%;
+    left: -100px;
+    font-size: 30px;
+    animation: flyThree 22s linear infinite;
+}
+
+
+@keyframes flyThree {
+
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(5deg);
+    }
+
+    90% {
+        opacity: 0.15;
+    }
+
+    100% {
+        left: calc(100% + 100px);
+        opacity: 0;
+    }
+}
+
+
+/* Plane 4 */
+
+.plane-4 {
+    top: 70%;
+    right: -100px;
+    font-size: 24px;
+    transform: scaleX(-1);
+    animation: flyFour 26s linear infinite;
+}
+
+
+@keyframes flyFour {
+
+    0% {
+        right: -100px;
+    }
+
+    50% {
+        transform: scaleX(-1) translateY(-20px);
+    }
+
+    100% {
+        right: calc(100% + 100px);
+    }
+}
+
+
+/* =====================================
+   BACKGROUND GLOW
+===================================== */
+
+.register-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+}
+
+
+.glow-1 {
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 7%;
+    background: rgba(0, 119, 255, 0.15);
+}
+
+
+.glow-2 {
+    width: 320px;
+    height: 320px;
+    bottom: -80px;
+    right: 6%;
+    background: rgba(234,182,77,0.1);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .register-page {
+        padding: 30px 15px;
+    }
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .register-brand h1 {
+        font-size: 32px;
+    }
+
+    .plane-3,
+    .plane-4 {
+        display: none;
+    }
+}
+
+
+/* ================================
+   GLOBAL BACKGROUND
+================================ */
+
+html,
+body {
+    min-height: 100%;
+    background: #082f5e !important;
+}
+
+.app-wrapper,
+.app-main,
+.app-content {
+    background: #082f5e !important;
+}
+
+
+/* ================================
+   TOP NAVBAR
+================================ */
+
+.flybook-navbar {
+    min-height: 72px;
+    padding: 0 30px;
+    background: #061f3f !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+
+.flybook-brand {
+    color: white !important;
+    font-size: 24px;
+    margin-right: 35px;
+    text-decoration: none;
+}
+
+
+.flybook-navbar .nav-link {
+    color: rgba(255,255,255,0.78) !important;
+    padding: 24px 16px !important;
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+
+    .flybook-navbar .nav-link:hover {
+        color: #efc565 !important;
+    }
+
+
+.logout-link {
+    color: #ff6b6b !important;
+}
+
+
+/* ================================
+   REMOVE SIDEBAR SPACE
+================================ */
+
+.app-main {
+    margin-left: 0 !important;
+    margin-inline-start: 0 !important;
+    min-height: calc(100vh - 72px);
+}
+
+
+/* ================================
+   REGISTER PAGE
+================================ */
+
+.register-page {
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    margin: 0;
+    border-radius: 0;
+    background: radial-gradient( circle at 15% 20%, rgba(13,110,253,0.18), transparent 30% ), radial-gradient( circle at 85% 80%, rgba(234,182,77,0.10), transparent 30% ), linear-gradient( 135deg, #061f3f 0%, #082f5e 50%, #0b477d 100% );
+}
+
+
+/* remove unwanted white/grey areas */
+
+.container-fluid {
+    background: transparent !important;
+}
+
+.app-footer {
+    background: #061f3f !important;
+    color: rgba(255,255,255,0.6);
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+/* ==========================================
+   FINAL FLYBOOK LAYOUT FIX
+========================================== */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    background: #082f5e !important;
+}
+
+
+.flybook-body {
+    min-height: 100vh !important;
+    background: linear-gradient( 135deg, #061f3f 0%, #082f5e 55%, #0b477d 100% ) !important;
+    color: white;
+}
+
+
+/* أهم جزء: لا AdminLTE Grid */
+
+.flybook-page {
+    width: 100% !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.flybook-navbar {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 72px !important;
+    margin: 0 !important;
+    background: #061f3f !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.18);
+    z-index: 100;
+}
+
+
+.flybook-brand {
+    color: white !important;
+    font-size: 24px;
+    font-weight: 800;
+    margin-right: 35px !important;
+    text-decoration: none;
+}
+
+
+    .flybook-brand span {
+        color: #f0bd51;
+    }
+
+
+    .flybook-brand .brand-plane {
+        color: white;
+        margin-right: 5px;
+    }
+
+
+.flybook-navbar .navbar-collapse {
+    flex-grow: 1;
+}
+
+
+.flybook-navbar .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.flybook-navbar .nav-link {
+    color: rgba(255,255,255,0.78) !important;
+    padding: 24px 15px !important;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+
+    .flybook-navbar .nav-link:hover {
+        color: #f0bd51 !important;
+    }
+
+
+.user-link {
+    color: #f0bd51 !important;
+}
+
+
+.logout-link {
+    color: #ff7070 !important;
+}
+
+
+.register-link {
+    color: #f0bd51 !important;
+}
+
+
+
+/* ==========================
+   CONTENT
+========================== */
+
+.flybook-main {
+    width: 100% !important;
+    flex: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+
+
+/* ==========================
+   REGISTER
+========================== */
+
+.register-page {
+    width: 100% !important;
+    min-height: calc(100vh - 72px) !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: radial-gradient( circle at 15% 20%, rgba(13,110,253,0.17), transparent 30% ), radial-gradient( circle at 85% 80%, rgba(234,182,77,0.10), transparent 30% ), linear-gradient( 135deg, #061f3f 0%, #082f5e 50%, #0b477d 100% ) !important;
+}
+
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+.flybook-footer {
+    width: 100%;
+    padding: 17px 0;
+    background: #061f3f;
+    color: rgba(255,255,255,0.6);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+}
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 991px) {
+
+    .flybook-navbar
+    .navbar-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flybook-navbar
+    .navbar-collapse {
+        margin-top: 10px;
+        background: #061f3f;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .flybook-navbar
+    .nav-link {
+        padding: 10px 12px !important;
+    }
+}
+
+
+
+/* =====================================
+   LOGIN PAGE
+===================================== */
+
+.login-page {
+    position: relative;
+    min-height: calc(100vh - 125px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 45px 20px;
+    background: radial-gradient( circle at 18% 25%, rgba(13,110,253,0.16), transparent 28% ), radial-gradient( circle at 85% 75%, rgba(234,182,77,0.10), transparent 28% ), linear-gradient( 135deg, #061f3f 0%, #082f5e 50%, #0b477d 100% );
+}
+
+
+/* Login box */
+
+.login-card {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 22px;
+    background: rgba(18,24,31,0.94);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+    backdrop-filter: blur(15px);
+    animation: loginAppear 0.7s ease;
+}
+
+
+@keyframes loginAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Brand */
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.login-logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    background: linear-gradient( 135deg, #e0a93d, #f3c963 );
+    color: #071d39;
+    font-size: 32px;
+    box-shadow: 0 10px 30px rgba(234,182,77,0.22);
+}
+
+
+.login-brand h1 {
+    margin: 0;
+    color: white;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+
+    .login-brand h1 span {
+        color: #eab64d;
+    }
+
+
+.login-brand p {
+    margin-top: 8px;
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+}
+
+
+/* Inputs */
+
+.login-card .form-label {
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+}
+
+
+.login-control {
+    min-height: 50px;
+    border-radius: 11px;
+    border: 1px solid #45515d;
+    background: #20262d;
+    color: white;
+}
+
+
+    .login-control::placeholder {
+        color: rgba(255,255,255,0.35);
+    }
+
+
+    .login-control:focus {
+        background: #20262d;
+        color: white;
+        border-color: #eab64d;
+        box-shadow: 0 0 0 3px rgba(234,182,77,0.12);
+    }
+
+
+/* Login button */
+
+.login-btn {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient( 90deg, #dda73c, #f1c867 );
+    color: #071d39;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+
+    .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(234,182,77,0.25);
+    }
+
+
+    .login-btn span {
+        transition: 0.25s ease;
+    }
+
+
+    .login-btn:hover span {
+        transform: translateX(7px);
+    }
+
+
+/* Register link */
+
+.login-register {
+    margin-top: 22px;
+    text-align: center;
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+}
+
+
+    .login-register a {
+        color: #eab64d;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+
+        .login-register a:hover {
+            text-decoration: underline;
+        }
+
+
+/* =====================================
+   MOVING PLANES
+===================================== */
+
+.login-plane {
+    position: absolute;
+    z-index: 1;
+    color: rgba(255,255,255,0.14);
+    pointer-events: none;
+}
+
+
+.login-plane-1 {
+    top: 18%;
+    left: -100px;
+    font-size: 46px;
+    animation: loginFlyOne 16s linear infinite;
+}
+
+
+@keyframes loginFlyOne {
+
+    from {
+        left: -100px;
+        transform: translateY(20px) rotate(6deg);
+    }
+
+    to {
+        left: calc(100% + 100px);
+        transform: translateY(-20px) rotate(6deg);
+    }
+}
+
+
+.login-plane-2 {
+    top: 55%;
+    right: -100px;
+    font-size: 32px;
+    animation: loginFlyTwo 21s linear infinite;
+}
+
+
+@keyframes loginFlyTwo {
+
+    from {
+        right: -100px;
+        transform: scaleX(-1) translateY(10px);
+    }
+
+    to {
+        right: calc(100% + 100px);
+        transform: scaleX(-1) translateY(-20px);
+    }
+}
+
+
+.login-plane-3 {
+    bottom: 15%;
+    left: -100px;
+    font-size: 25px;
+    animation: loginFlyThree 25s linear infinite;
+}
+
+
+@keyframes loginFlyThree {
+
+    from {
+        left: -100px;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.14;
+    }
+
+    85% {
+        opacity: 0.14;
+    }
+
+    to {
+        left: calc(100% + 100px);
+        opacity: 0;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .login-page {
+        padding: 30px 15px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+    }
+
+    .login-brand h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* =====================================
+   ADMIN DASHBOARD
+===================================== */
+
+.admin-dashboard-page {
+    width: 100%;
+    max-width: 1320px;
+    padding: 34px 18px 46px;
+}
+
+.admin-dashboard-header {
+    margin-bottom: 24px;
+    padding: 24px 26px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: linear-gradient( 135deg, rgba(6,31,63,0.92), rgba(8,47,94,0.74) );
+    box-shadow: 0 16px 38px rgba(0,0,0,0.18);
+}
+
+.admin-dashboard-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #f0bd51;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-dashboard-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.admin-dashboard-header p {
+    margin: 8px 0 0;
+    color: rgba(255,255,255,0.66);
+    font-size: 15px;
+}
+
+.admin-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.admin-dashboard-stat-card {
+    min-height: 128px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    background: rgba(18,24,31,0.9);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-dashboard-stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(240,189,81,0.28);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.22);
+}
+
+.admin-dashboard-stat-card-featured {
+    background: linear-gradient( 135deg, rgba(18,24,31,0.96), rgba(8,47,94,0.88) );
+}
+
+.admin-dashboard-stat-icon {
+    min-width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(13,110,253,0.14);
+    color: #f0bd51;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.admin-dashboard-stat-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: rgba(255,255,255,0.62);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-dashboard-stat-card strong {
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.admin-dashboard-stat-card-featured strong {
+    font-size: 27px;
+}
+
+.admin-dashboard-panel {
+    margin-top: 24px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    background: rgba(18,24,31,0.9);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+}
+
+.admin-dashboard-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.admin-dashboard-section-header h4 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.admin-dashboard-section-header p {
+    margin: 5px 0 0;
+    color: rgba(255,255,255,0.58);
+    font-size: 13px;
+}
+
+.admin-dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.admin-dashboard-action {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.035);
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.admin-dashboard-action:hover {
+    transform: translateY(-2px);
+    border-color: rgba(240,189,81,0.25);
+    background: rgba(13,110,253,0.12);
+    color: white;
+    text-decoration: none;
+}
+
+.admin-dashboard-action span {
+    min-width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: rgba(13,110,253,0.16);
+    color: #f0bd51;
+    font-weight: 800;
+}
+
+.admin-dashboard-action strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.admin-dashboard-bookings-panel {
+    padding-bottom: 8px;
+}
+
+.admin-dashboard-table-wrap {
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+}
+
+.admin-dashboard-table {
+    min-width: 1120px;
+    margin-bottom: 0;
+    color: rgba(255,255,255,0.78);
+    vertical-align: middle;
+}
+
+.admin-dashboard-table thead th {
+    padding: 14px 16px;
+    border-color: rgba(255,255,255,0.08);
+    background: rgba(6,31,63,0.86);
+    color: rgba(255,255,255,0.82);
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.admin-dashboard-table tbody td {
+    padding: 14px 16px;
+    border-color: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.018);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.admin-dashboard-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.admin-dashboard-table tbody tr:hover td {
+    background: rgba(13,110,253,0.08);
+}
+
+.admin-dashboard-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.admin-dashboard-badge-success {
+    background: rgba(25,135,84,0.13);
+    color: #9ee2bf;
+}
+
+.admin-dashboard-badge-info {
+    background: rgba(13,110,253,0.15);
+    color: #9ec5fe;
+}
+
+.admin-dashboard-badge-warning {
+    background: rgba(240,189,81,0.14);
+    color: #f6d98d;
+}
+
+.admin-dashboard-badge-danger {
+    background: rgba(220,53,69,0.14);
+    color: #f1a5ae;
+}
+
+.admin-dashboard-badge-muted {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.72);
+}
+
+@media (max-width: 1199px) {
+
+    .admin-dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-dashboard-actions {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .admin-dashboard-page {
+        padding: 24px 14px 34px;
+    }
+
+    .admin-dashboard-header {
+        padding: 20px;
+    }
+
+    .admin-dashboard-header h2 {
+        font-size: 28px;
+    }
+
+    .admin-dashboard-stats,
+    .admin-dashboard-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-dashboard-stat-card {
+        min-height: 112px;
+        padding: 18px;
+    }
+
+    .admin-dashboard-panel {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,137 @@
+@model List<FlyBook.Models.Flight>
+
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Search Results</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (Model == null || Model.Count == 0)
+    {
+        <div class="alert alert-warning">
+            No flights found for the selected route and date.
+        </div>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-secondary">
+
+            Back to Search
+
+        </a>
+    }
+    else
+    {
+        foreach (var flight in Model)
+        {
+            <div class="card mb-3 shadow-sm">
+
+                <div class="card-body">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-2">
+
+                            <strong>
+                                @(flight.Airline?.Name ?? "N/A")
+                            </strong>
+
+                            <br />
+
+                            @flight.FlightNumber
+
+                        </div>
+
+                        <div class="col-md-2 text-center">
+
+                            <h5>
+                                @flight.DepartureDateTime.ToString("HH:mm")
+                            </h5>
+
+                            @(flight.FromAirport?.Code ?? "N/A")
+
+                        </div>
+
+                        <div class="col-md-2 text-center">
+
+                            →
+
+                            <br />
+
+                            Direct
+
+                        </div>
+
+                        <div class="col-md-2 text-center">
+
+                            <h5>
+                                @flight.ArrivalDateTime.ToString("HH:mm")
+                            </h5>
+
+                            @(flight.ToAirport?.Code ?? "N/A")
+
+                        </div>
+
+                        <div class="col-md-2 text-center">
+
+                            <strong>
+                                JOD @flight.Price
+                            </strong>
+
+                            <br />
+
+                            Seats: @flight.AvailableSeats
+
+                        </div>
+
+                        <div class="col-md-2 text-center">
+
+                            <a asp-controller="Flights"
+                               asp-action="Details"
+                               asp-route-id="@flight.FlightId"
+                               class="btn btn-secondary">
+
+                                Details
+
+                            </a>
+
+                            @if (flight.AvailableSeats > 0)
+                            {
+                                <a asp-controller="Booking"
+                                   asp-action="Create"
+                                   asp-route-flightId="@flight.FlightId"
+                                   class="btn btn-primary">
+
+                                    Select
+
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="btn btn-secondary disabled">
+
+                                    Full
+
+                                </span>
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    }
+
+</div>

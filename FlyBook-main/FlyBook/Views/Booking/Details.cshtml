@@ -1,0 +1,119 @@
+@model FlyBook.Models.Booking
+
+@{
+    ViewData["Title"] = "Booking Details";
+    var paymentStatus = Model.Payment?.PaymentStatus ?? "Pending";
+}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Booking Details
+    </h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning">
+            @TempData["Error"]
+        </div>
+    }
+
+    <div class="card mb-4">
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <p>
+                        <strong>Booking Number:</strong>
+                        @Model.BookingNumber
+                    </p>
+
+                    <p>
+                        <strong>Booking Status:</strong>
+                        @Model.Status
+                    </p>
+
+                    <p>
+                        <strong>Payment Status:</strong>
+                        @paymentStatus
+                    </p>
+
+                    <p>
+                        <strong>Total Price:</strong>
+                        JOD @Model.TotalPrice
+                    </p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <p>
+                        <strong>Passenger:</strong>
+                        @(Model.Passenger == null ? "N/A" : $"{Model.Passenger.FirstName} {Model.Passenger.LastName}")
+                    </p>
+
+                    <p>
+                        <strong>Flight:</strong>
+                        @(Model.Flight?.FlightNumber ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Airline:</strong>
+                        @(Model.Flight?.Airline?.Name ?? "N/A")
+                    </p>
+
+                    <p>
+                        <strong>Route:</strong>
+                        @(Model.Flight?.FromAirport?.Code ?? "N/A")
+                        →
+                        @(Model.Flight?.ToAirport?.Code ?? "N/A")
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="mt-3">
+
+                @if (paymentStatus != "Paid" && Model.Status != "Cancelled")
+                {
+                    <a asp-controller="Payment"
+                       asp-action="Pay"
+                       asp-route-bookingId="@Model.BookingId"
+                       class="btn btn-success">
+
+                        Pay Now
+
+                    </a>
+                }
+
+                @if (Model.Ticket != null && paymentStatus == "Paid")
+                {
+                    <a asp-controller="Booking"
+                       asp-action="Ticket"
+                       asp-route-id="@Model.BookingId"
+                       class="btn btn-primary">
+
+                        View Ticket
+
+                    </a>
+                }
+
+                <a asp-controller="Booking"
+                   asp-action="Index"
+                   class="btn btn-secondary">
+
+                    Back
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

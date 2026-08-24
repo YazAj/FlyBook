@@ -1,0 +1,41 @@
+@model ErrorViewModel
+
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="container mt-5">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h2 class="mb-3">
+                Something went wrong
+            </h2>
+
+            <p>
+                We could not complete your request. Please try again.
+            </p>
+
+            @if (Model.ShowRequestId)
+            {
+                <p>
+                    <strong>Request ID:</strong>
+                    <code>@Model.RequestId</code>
+                </p>
+            }
+
+            <a asp-controller="Home"
+               asp-action="Index"
+               class="btn btn-primary">
+
+                Back to Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
